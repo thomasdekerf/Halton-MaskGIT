@@ -1,0 +1,24 @@
+data:
+  root: ./data
+  num_workers: 8
+codec:
+  num_codes: 512
+  patch_size: 4
+model:
+  dim: 512
+  layers: 12
+  heads: 8
+opt:
+  lr: 2e-4
+  weight_decay: 0.01
+  warmup_steps: 5000
+train:
+  batch_size: 128
+  epochs: 30
+  precision: bf16-mixed
+  devices: 1
+sample:
+  T: 8
+  selector: confidence
+  commit_thresh: 0.65
+  remask_thresh: 0.40
