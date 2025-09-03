@@ -1,0 +1,15 @@
+task: inpaint
+window_tokens: 64
+window_overlap: 8
+maskgit:
+  steps: 12
+  mask_ratio_start: 0.95
+  mask_ratio_end: 0.60
+use_thumbnail: true
+xy_pos_dim: 256
+thumb_size: 1024
+
+# Paths
+slide_csv: path/to/slides.csv
+vq_tokens_root: path/to/tokens
+thumbs_root: path/to/thumbs
